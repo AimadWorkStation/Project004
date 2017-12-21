@@ -1,0 +1,24 @@
+/*
+	theme Name : NextG WorkShare
+	Theme Coder : EmadEddin Had
+	Designer : EmadEddin had
+*/
+@font-face {
+  font-family: 'MyWebFont';
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+}
+.upper-bar {
+  font-family: 'MyWebFont' , sans-serif;
+  font-size: 14px;
+}
+
+.upper-bar {
+  background-color: #0D89BC;
+  color: #FFF;
+  padding: 10px;
+}
+.upper-bar .navbar-quote {
+  padding-left: 43%;
+}
+
+/*# sourceMappingURL=style.css.map */
