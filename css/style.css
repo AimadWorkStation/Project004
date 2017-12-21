@@ -1,15 +1,27 @@
 /*
 	theme Name : NextG WorkShare
-	Theme Coder : EmadEddin Had
-	Designer : EmadEddin had
+	Theme Coder : EmadEddin Had as youri tchad in github
+	Designer : EmadEddin had youri tchad in github
 */
 @font-face {
-  font-family: 'MyWebFont';
+  font-family: 'mainFont';
   src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
 }
-.upper-bar {
-  font-family: 'MyWebFont' , sans-serif;
+@font-face {
+  font-family: 'brandFont';
+  src: url("../fonts/Fantastic-Reason.ttf") format("truetype");
+}
+.upper-bar, .features div {
+  font-family: 'mainFont' , sans-serif;
   font-size: 14px;
+}
+
+.slider .carousel-inner h1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .upper-bar {
@@ -19,6 +31,121 @@
 }
 .upper-bar .navbar-quote {
   padding-left: 43%;
+}
+
+.navbar .navbar-brand span {
+  font-family: 'brandFont';
+  letter-spacing: 2px;
+}
+.navbar .navbar-brand span:first-child {
+  color: #0D89BC;
+}
+.navbar .navbar-brand span:last-child {
+  color: #C75DF9;
+}
+.navbar .navbar-brand:hover span:first-child {
+  color: #C75DF9;
+  zoom: 105%;
+}
+.navbar .navbar-brand:hover span:last-child {
+  color: #0D89BC;
+  zoom: 105%;
+}
+.navbar .navbar-nav {
+  padding-right: 15%;
+}
+.navbar .navbar-nav .nav-link {
+  font-size: 16px;
+  color: #0D89BC;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: #C75DF9;
+}
+.navbar .navbar-nav .active > .nav-link {
+  color: #C75DF9;
+}
+.navbar .navbar-nav .active > .nav-link:hover {
+  color: #C75DF9;
+}
+.navbar .navbar-nav .active > .nav-link:focus {
+  color: #C75DF9;
+}
+
+.slider {
+  background-color: #EEE;
+}
+.slider .carousel-indicators {
+  cursor: pointer;
+}
+.slider .carousel-indicators li {
+  width: 24px;
+  height: 5px;
+}
+.slider .carousel-inner {
+  position: relative;
+}
+.slider .carousel-inner h1 {
+  z-index: 1;
+  color: #eef9ff;
+  font-size: 2.8rem;
+  max-width: 50%;
+  font-family: 'mainFont' , sans-serif;
+  margin-top: 14%;
+  margin-left: 5%;
+}
+.slider .carousel-inner h1 span {
+  background-color: rgba(13, 137, 188, 0.5);
+  line-height: 1.9;
+  text-transform: uppercase;
+}
+.slider .carousel-one {
+  background: url("../images/background1.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  background-size: cover;
+}
+.slider .carousel-two {
+  background: url("../images/background2.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  background-size: cover;
+}
+.slider .carousel-three {
+  background: url("../images/background3.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  background-size: cover;
+}
+
+.features {
+  padding: 50px 0;
+}
+.features div {
+  text-align: center;
+  line-height: 1.3;
+}
+.features div i {
+  font-size: 46px;
+  color: #C75DF9;
+  transform: rotate(20deg);
+  transition: all 0.5s ease-in-out;
+}
+.features div i:hover {
+  transform: rotateY(180deg);
+}
+.features div h3 {
+  color: #0D89BC;
+  font-size: 24px;
+  padding: 10px;
+}
+.features div h3 span {
+  color: #C75DF9;
 }
 
 /*# sourceMappingURL=style.css.map */
