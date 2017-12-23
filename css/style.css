@@ -3,6 +3,7 @@
 	Theme Coder : EmadEddin Had as youri tchad in github
 	Designer : EmadEddin had youri tchad in github
 */
+/* main two officiel colors*/
 @font-face {
   font-family: 'mainFont';
   src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
@@ -11,6 +12,10 @@
   font-family: 'brandFont';
   src: url("../fonts/Fantastic-Reason.ttf") format("truetype");
 }
+.row {
+  margin-right: 0px !important;
+}
+
 .upper-bar, .features div {
   font-family: 'mainFont' , sans-serif;
   font-size: 14px;
@@ -24,6 +29,7 @@
   height: 100%;
 }
 
+/* start upper bar */
 .upper-bar {
   background-color: #0D89BC;
   color: #FFF;
@@ -33,6 +39,14 @@
   padding-left: 43%;
 }
 
+/* end upper bar */
+/* start navbar*/
+.navbar {
+  /*.navbar .*/
+}
+.navbar .navbar-brand {
+  /* .navbar-brand .*/
+}
 .navbar .navbar-brand span {
   font-family: 'brandFont';
   letter-spacing: 2px;
@@ -61,17 +75,20 @@
 .navbar .navbar-nav .nav-link:hover {
   color: #C75DF9;
 }
-.navbar .navbar-nav .active > .nav-link {
+.navbar .navbar-nav .active > .nav-link, .navbar .navbar-nav .feature-service ul li:hover > .nav-link, .feature-service ul .navbar .navbar-nav li:hover > .nav-link {
   color: #C75DF9;
 }
-.navbar .navbar-nav .active > .nav-link:hover {
+.navbar .navbar-nav .active > .nav-link:hover, .navbar .navbar-nav .feature-service ul li:hover > .nav-link:hover, .feature-service ul .navbar .navbar-nav li:hover > .nav-link:hover {
   color: #C75DF9;
 }
-.navbar .navbar-nav .active > .nav-link:focus {
+.navbar .navbar-nav .active > .nav-link:focus, .navbar .navbar-nav .feature-service ul li:hover > .nav-link:focus, .feature-service ul .navbar .navbar-nav li:hover > .nav-link:focus {
   color: #C75DF9;
 }
 
+/* end nav bar*/
+/* start slider*/
 .slider {
+  /* position: relative;*/
   background-color: #EEE;
 }
 .slider .carousel-indicators {
@@ -90,6 +107,8 @@
   font-size: 2.8rem;
   max-width: 50%;
   font-family: 'mainFont' , sans-serif;
+  /* display: flex;*/
+  /* align-items: center;*/
   margin-top: 14%;
   margin-left: 5%;
 }
@@ -97,32 +116,27 @@
   background-color: rgba(13, 137, 188, 0.5);
   line-height: 1.9;
   text-transform: uppercase;
+  /* text-align: center;*/
+  /* display: inline-block;*/
 }
 .slider .carousel-one {
   background: url("../images/background1.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   -ms-background-size: cover;
   background-size: cover;
 }
 .slider .carousel-two {
   background: url("../images/background2.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   -ms-background-size: cover;
   background-size: cover;
 }
 .slider .carousel-three {
   background: url("../images/background3.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   -ms-background-size: cover;
   background-size: cover;
 }
 
+/* end slider*/
+/* start features */
 .features {
   padding: 50px 0;
 }
@@ -133,10 +147,13 @@
 .features div i {
   font-size: 46px;
   color: #C75DF9;
+  -webkit-transform: rotate(20deg);
   transform: rotate(20deg);
+  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 .features div i:hover {
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 .features div h3 {
@@ -147,5 +164,115 @@
 .features div h3 span {
   color: #C75DF9;
 }
+
+/* end features*/
+/* start organisation overview*/
+.organisme {
+  background-color: rgba(199, 93, 249, 0.25);
+}
+.organisme .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* establish flex container */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  /* make main axis vertical */
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  /* center items vertically, in this case */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /* center items horizontally, in this case */
+}
+.organisme .content h3 {
+  margin: 10% 0 5%;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+.organisme .content h4 {
+  text-align: left;
+}
+.organisme .content p {
+  width: 70%;
+  text-align: center;
+  opacity: 0.8;
+  font-family: initial;
+}
+.organisme .content .content q {
+  font-family: cursive;
+  font-weight: inherit;
+}
+.organisme .content a {
+  padding: 10px;
+  background-color: #e416ae;
+  margin: 30px 0 50px;
+  width: 138px;
+  color: white;
+  font-family: serif;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.organisme .content a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+/* end organisation overview*/
+/* start features services*/
+.feature-service {
+  min-height: 690px;
+  background-color: white;
+}
+.feature-service h3 {
+  margin: 10% 0 5%;
+  font-size: 2.5em;
+}
+.feature-service p {
+  opacity: 0.8;
+  font-family: initial;
+}
+.feature-service ul {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.feature-service ul li {
+  margin-bottom: 10px;
+  color: #0D89BC;
+  border: 2px solid #0D89BC;
+  padding: 3px;
+  margin-left: 37px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+.feature-service ul li:hover {
+  cursor: pointer;
+}
+.feature-service ul .active, .feature-service ul li:hover {
+  border: 2px solid #C75DF9;
+  background-color: #C75DF9;
+  color: white;
+}
+.feature-service .col-sm-6 {
+  -webkit-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+}
+.feature-service .row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+.feature-service .row.no-gutter [class*='col-']:not(:first-child),
+.feature-service .row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* end features services*/
 
 /*# sourceMappingURL=style.css.map */

@@ -3,7 +3,7 @@
 	Theme Coder : EmadEddin Had as youri tchad in github
 	Designer : EmadEddin had youri tchad in github
 */
-// main two officiel colors
+/* main two officiel colors*/
 $mainfColor : #0D89BC;
 $mainsColor : #C75DF9;
 $sliderMainTextColor : #eef9ff;
@@ -16,6 +16,10 @@ $sliderMainTextColor : #eef9ff;
   font-family: 'brandFont';
   src: url('../fonts/Fantastic-Reason.ttf') format('truetype'); 
 }  
+// affect to bootstrap 
+.row {
+    margin-right: 0px !important;
+}
 
 %mainFont{
 	font-family: 'mainFont' , sans-serif;
@@ -29,7 +33,7 @@ $sliderMainTextColor : #eef9ff;
     width: 100%;
     height: 100%;
 }
-// start upper bar 
+/* start upper bar */
 
 .upper-bar {
 	background-color: $mainfColor;
@@ -42,9 +46,9 @@ $sliderMainTextColor : #eef9ff;
 	}
 }
 
-// end upper bar 
+/* end upper bar */
 
-// start navbar
+/* start navbar*/
 .navbar {
 	.navbar-brand {
 		span{
@@ -69,11 +73,11 @@ $sliderMainTextColor : #eef9ff;
 			  zoom : 105%;
 			}
 		}
-		// .navbar-brand .
+		/* .navbar-brand .*/
 		
 
 	}	
-	//.navbar .
+	/*.navbar .*/
 	.navbar-nav{
 		padding-right: 15%;
 		.nav-link{
@@ -97,19 +101,16 @@ $sliderMainTextColor : #eef9ff;
 }
 
 
-// end nav bar
+/* end nav bar*/
 
-// start slider
+/* start slider*/
 @mixin backgdSize($r){
-	-webkit-background-size : $r;
-	-moz-background-size : $r;
-	-o-background-size : $r;
 	-ms-background-size : $r;
 	background-size : $r;
 }
 
 .slider {
-	// position: relative;
+	/* position: relative;*/
 	background-color: #EEE;
 
 	.carousel-indicators {
@@ -131,8 +132,8 @@ $sliderMainTextColor : #eef9ff;
         	font-size: 2.8rem;
         	max-width: 50%;
 			font-family: 'mainFont' , sans-serif;
-			// display: flex;
-			// align-items: center;
+			/* display: flex;*/
+			/* align-items: center;*/
 			margin-top: 14%;
 			margin-left: 5%;
         
@@ -140,8 +141,8 @@ $sliderMainTextColor : #eef9ff;
         		background-color: rgba(13,137,188,0.5);
     			line-height: 1.9;
     			text-transform: uppercase;
-    			// text-align: center;
-    			// display: inline-block;
+    			/* text-align: center;*/
+    			/* display: inline-block;*/
         	}
 		}
         
@@ -159,9 +160,9 @@ $sliderMainTextColor : #eef9ff;
 
 }
 
-// end slider
+/* end slider*/
 
-// start features 
+/* start features */
 
 .features{
 	padding: 50px 0;
@@ -174,11 +175,14 @@ $sliderMainTextColor : #eef9ff;
 		i {
     		font-size: 46px;
 			color: $mainsColor;
-			transform: rotate(20deg);
+			-webkit-transform: rotate(20deg);
+			        transform: rotate(20deg);
+			-webkit-transition: all 0.5s ease-in-out;
 			transition: all 0.5s ease-in-out;
 			
 			&:hover{
-				transform: rotateY(180deg);
+				-webkit-transform: rotateY(180deg);
+				        transform: rotateY(180deg);
 			}
 		}
 		h3{
@@ -194,4 +198,121 @@ $sliderMainTextColor : #eef9ff;
 
 
 
-// end features
+/* end features*/
+
+/* start organisation overview*/
+
+.organisme {
+	background-color: rgba(199,93,249,0.25);
+
+	.content{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;           /* establish flex container */
+    	-webkit-box-orient: vertical;
+    	-webkit-box-direction: normal;
+    	    -ms-flex-direction: column;
+    	        flex-direction: column;  /* make main axis vertical */
+    	-webkit-box-pack: center;
+    	    -ms-flex-pack: center;
+    	        justify-content: center; /* center items vertically, in this case */
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;     /* center items horizontally, in this case */
+		h3 {
+		    margin: 10% 0 5%;
+		    font-size: 2.5em;
+		    text-transform: uppercase;
+		}
+		h4 {
+			text-align: left;
+		}
+		p {
+		    width: 70%;
+		    text-align: center;
+		    opacity: 0.8;
+		    font-family: initial;
+		}
+		.content q {
+		    font-family: cursive;
+		    font-weight: inherit;
+		}
+		a {
+		    padding: 10px;
+		    background-color: #e416ae;
+		    margin: 30px 0 50px;
+		    width: 138px;
+		    color: white;
+		    font-family: serif;
+		    text-align: center;
+		    border-radius: 5px;
+		    -webkit-transition: all 0.5s ease-in-out;
+		    transition: all 0.5s ease-in-out;
+	
+		    &:hover{
+		    	text-decoration: none;
+		    	opacity: 0.8;
+		    }
+		}
+	}
+}
+
+/* end organisation overview*/
+
+/* start features services*/
+
+.feature-service{
+	min-height: 690px;
+	background-color: white;
+	h3 {
+	    margin: 10% 0 5%;
+	    font-size: 2.5em;
+	}
+	p {
+	    opacity: 0.8;
+	    font-family: initial;
+	}
+	ul {
+		margin-top: 20px;
+		margin-bottom: 30px;
+		li{
+			margin-bottom: 10px;
+			color: $mainfColor;
+			border: 2px solid $mainfColor;
+			padding: 3px;
+    		margin-left: 37px;
+    		-webkit-transition: all .5s ease-in-out;
+    		transition: all .5s ease-in-out;
+    		&:hover{
+    			cursor: pointer;
+    			@extend .active;
+    		}
+		}
+		.active{
+				border: 2px solid $mainsColor;
+				background-color: $mainsColor;
+				color: white;
+			}
+	}
+	
+	//to animate the opacity of images 
+	.col-sm-6{
+		-webkit-transition: opacity .5s ease-in-out;
+    		transition: opacity .5s ease-in-out;
+	}
+
+	// take of space beteen column
+	.row.no-gutter {
+	  margin-left: 0;
+	  margin-right: 0;
+	}
+
+	.row.no-gutter [class*='col-']:not(:first-child),
+	.row.no-gutter [class*='col-']:not(:last-child) {
+	  padding-right: 0;
+	  padding-left: 0;
+	}
+}
+
+/* end features services*/
+
