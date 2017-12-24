@@ -1,7 +1,10 @@
 /*
+
 	theme Name : NextG WorkShare
 	Theme Coder : EmadEddin Had as youri tchad in github
-	Designer : EmadEddin had youri tchad in github
+	Designer : EmadEddin had as youri tchad in github
+
+
 */
 /* main two officiel colors*/
 $mainfColor : #0D89BC;
@@ -33,6 +36,31 @@ $sliderMainTextColor : #eef9ff;
     width: 100%;
     height: 100%;
 }
+
+%logoNextWorshare{
+	span{
+		font-family: 'brandFont';
+		letter-spacing: 2px;
+
+		&:first-child{
+			color: $mainfColor;
+		}
+		&:last-child{
+			color:$mainsColor;
+		}
+		}
+
+		&:hover span{
+		&:first-child{
+		  color:$mainsColor ;
+		  zoom : 105%;
+		}
+		&:last-child{
+		  color:$mainfColor;
+		  zoom : 105%;
+		}
+	}
+}
 /* start upper bar */
 
 .upper-bar {
@@ -51,28 +79,7 @@ $sliderMainTextColor : #eef9ff;
 /* start navbar*/
 .navbar {
 	.navbar-brand {
-		span{
-		  font-family: 'brandFont';
-		  letter-spacing: 2px;
-
-		  &:first-child{
-		  	color: $mainfColor;
-		  }
-		  &:last-child{
-		  	color:$mainsColor;
-		  }
-		}
-
-		&:hover span{
-			&:first-child{
-			  color:$mainsColor ;
-			  zoom : 105%;
-			}
-			&:last-child{
-			  color:$mainfColor;
-			  zoom : 105%;
-			}
-		}
+		@extend %logoNextWorshare;
 		/* .navbar-brand .*/
 		
 
@@ -262,7 +269,6 @@ $sliderMainTextColor : #eef9ff;
 /* start features services*/
 
 .feature-service{
-	min-height: 690px;
 	background-color: white;
 	h3 {
 	    margin: 10% 0 5%;
@@ -296,7 +302,7 @@ $sliderMainTextColor : #eef9ff;
 	}
 	
 	//to animate the opacity of images 
-	.col-sm-6{
+	.row > div{
 		-webkit-transition: opacity .5s ease-in-out;
     		transition: opacity .5s ease-in-out;
 	}
@@ -312,7 +318,283 @@ $sliderMainTextColor : #eef9ff;
 	  padding-right: 0;
 	  padding-left: 0;
 	}
+	// typo effect
+	span{
+	  @extend %mainFont;
+	  margin:2em;
+	  color:#000000;
+	  // border:5px solid #666;
+	  padding:1em;
+	  height:300px;
+	  width:80%;
+	  max-width:800px;
+	  margin:2em auto;
+	}
+
+
 }
 
 /* end features services*/
 
+// stars latest posts
+.posts{
+	h3{
+		margin: 4% 0 1%;
+	    font-size: 2.5em;
+
+	}
+	p{
+		display: flex;
+
+	}
+	
+	span{
+	  @extend %mainFont;
+	  margin:2em;
+	  color:#000000;
+	  // border:5px solid #666;
+	  padding:1em;
+	  width: 60%;
+	  margin:2em auto;
+	}
+	.card{
+		padding: 0.1rem;
+		p{
+			padding-left: 10%;
+			font-size: 14px;
+			opacity: 0.9;
+		}
+		h6{
+			font-size: 13px;
+			color: $mainsColor !important;
+		}
+		a{
+			color: $mainsColor;
+			text-decoration: none;
+			border: $mainfColor 1px solid;
+			padding: 5px;
+			transition: all .5s ease-in-out;
+			&:hover{
+				color: $mainfColor;
+				border: $mainsColor 1px solid;
+				border-radius: 3px;
+			}
+		}
+	}
+	hr{
+		margin: 30px 0;
+	}
+}
+
+//end latest posts
+
+
+// start statistics
+
+.statistic{
+	// min-height: 220px;
+	color: $mainfColor;
+	span{
+		display: block;
+		font-size: 24px;
+		font-weight : bold;
+	}
+	i{
+		font-size: 60px;
+	}
+	p{
+		color: $mainsColor;
+		margin-top: -8px;
+	}
+	hr{
+		color: white;
+		margin-top: 100px;
+		border: none;
+	}
+}
+
+// end statistics
+
+// start contact us >>> footer
+
+.contact-us{
+	margin-bottom: 9%;
+	.container{
+		margin-top: 6%;
+	}
+	.up-contact-us{
+		background-color: $mainsColor;
+		height: 210px;
+		color: white;
+		p{
+			padding: 15px 20px;
+		}
+		.ctt{
+			margin-top: 30px;
+			a{
+				text-decoration: none;
+				text-transform: uppercase;
+				border: #FFF 1px solid;
+				padding: 8px;
+				color: white;
+				&:hover{
+					border-radius: 5px;
+					opacity: .8;
+				}
+			}
+		}	
+	}
+
+	.down-contact-us{
+		.about{
+			a{
+				text-decoration: none;
+				font-size: 14px;
+			}
+			span{
+				font-size: 30px;
+			}
+			@extend %logoNextWorshare;
+
+			p{
+				margin-top: 15px;
+				font-size: 14px;
+    			opacity: 0.9;
+			}
+			i{
+				color: $mainsColor;
+			    font-size: 14px;
+			}
+		}
+		.links{
+			// margin-top: 5%;
+			.myh3{
+				margin-bottom: 1%;
+				h3{
+			    	font-size: 18px;
+					color: $mainsColor;
+					font-weight: 400;
+					@extend %mainFont;
+				}
+			}
+			ul{
+				list-style: none;
+   				font-size: 14px;
+   				color: $mainsColor;
+			    line-height: 2;
+			    padding-right: 0px !important;
+    			padding-left: 0px !important;
+   				a{
+   					text-decoration: none;
+   					&:before{
+   						content: '> ';
+   					}
+   					&:hover{
+   						color: $mainfColor;
+   					}
+   				}
+			}
+			
+		}
+		
+		.contact{
+			h3{
+		    	font-size: 18px;
+				color: $mainsColor;
+				font-weight: 400;
+				@extend %mainFont;
+			}
+			p{
+				margin-top: 15px;
+				font-size: 14px;
+    			opacity: 0.9;
+    			span{
+    				color: $mainfColor;
+    			}
+			}
+		}
+
+
+	}
+
+
+}
+
+// end contact us >>footer
+
+// start copyright
+
+.copyright{
+	.copy{
+		font-size: 12px;
+	}
+	.social{
+		color: $mainfColor;
+	}
+}
+
+// end copyright 
+
+
+
+//modify the size of texts in page for small screen
+@media (max-width:590px) {
+	.slider .carousel-inner h1{
+		font-size: 2rem;
+		line-height: 1;
+	}
+	.organisme .content h3{
+		font-size: 1.9rem;
+		text-align: center;
+	}
+	.upper-bar .row > div{
+    	text-align: center;
+	}
+	.upper-bar .navbar-quote {
+    padding-left: 0;
+	}
+	.feature-service h3{
+		font-size: 2rem;
+	}
+	.feature-service ul.row{
+		padding-left: 0;
+	}
+	.statistic i{
+		font-size: 50px;
+	}
+	.contact-us .ctt{
+		margin-top: 0;
+	}
+	.contact-us .up-contact-us{
+		height: 270px;
+	}  
+}
+@media(max-width: 768px){
+	.contact-us .down-contact-us .links{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		&:before {
+			content: "";
+			position: absolute;
+			height: 5px;
+			border-bottom: 1px solid $mainsColor;
+			width: 100%;
+		}
+		.myh3{
+		    margin-top: 5%;
+		    margin-bottom: 0;
+		}
+	}
+	.contact-us .down-contact-us .contact h3{
+		margin-top: 10px;
+		&:before{
+			content: "";
+			position: absolute;
+			height: 5px;
+			border-bottom: 1px solid $mainsColor;
+			border-top: 1px solid white;
+			top: 0;
+			width: 100%;
+		}	
+	}
+}

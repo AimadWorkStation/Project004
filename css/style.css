@@ -1,7 +1,10 @@
 /*
+
 	theme Name : NextG WorkShare
 	Theme Coder : EmadEddin Had as youri tchad in github
-	Designer : EmadEddin had youri tchad in github
+	Designer : EmadEddin had as youri tchad in github
+
+
 */
 /* main two officiel colors*/
 @font-face {
@@ -16,7 +19,7 @@
   margin-right: 0px !important;
 }
 
-.upper-bar, .features div {
+.upper-bar, .features div, .feature-service span, .posts span, .contact-us .down-contact-us .links .myh3 h3, .contact-us .down-contact-us .contact h3 {
   font-family: 'mainFont' , sans-serif;
   font-size: 14px;
 }
@@ -27,6 +30,25 @@
   right: 0;
   width: 100%;
   height: 100%;
+}
+
+.navbar .navbar-brand span, .contact-us .down-contact-us .about span {
+  font-family: 'brandFont';
+  letter-spacing: 2px;
+}
+.navbar .navbar-brand span:first-child, .contact-us .down-contact-us .about span:first-child {
+  color: #0D89BC;
+}
+.navbar .navbar-brand span:last-child, .contact-us .down-contact-us .about span:last-child {
+  color: #C75DF9;
+}
+.navbar .navbar-brand:hover span:first-child, .contact-us .down-contact-us .about:hover span:first-child {
+  color: #C75DF9;
+  zoom: 105%;
+}
+.navbar .navbar-brand:hover span:last-child, .contact-us .down-contact-us .about:hover span:last-child {
+  color: #0D89BC;
+  zoom: 105%;
 }
 
 /* start upper bar */
@@ -46,24 +68,6 @@
 }
 .navbar .navbar-brand {
   /* .navbar-brand .*/
-}
-.navbar .navbar-brand span {
-  font-family: 'brandFont';
-  letter-spacing: 2px;
-}
-.navbar .navbar-brand span:first-child {
-  color: #0D89BC;
-}
-.navbar .navbar-brand span:last-child {
-  color: #C75DF9;
-}
-.navbar .navbar-brand:hover span:first-child {
-  color: #C75DF9;
-  zoom: 105%;
-}
-.navbar .navbar-brand:hover span:last-child {
-  color: #0D89BC;
-  zoom: 105%;
 }
 .navbar .navbar-nav {
   padding-right: 15%;
@@ -227,7 +231,6 @@
 /* end organisation overview*/
 /* start features services*/
 .feature-service {
-  min-height: 690px;
   background-color: white;
 }
 .feature-service h3 {
@@ -259,7 +262,7 @@
   background-color: #C75DF9;
   color: white;
 }
-.feature-service .col-sm-6 {
+.feature-service .row > div {
   -webkit-transition: opacity .5s ease-in-out;
   transition: opacity .5s ease-in-out;
 }
@@ -272,7 +275,238 @@
   padding-right: 0;
   padding-left: 0;
 }
+.feature-service span {
+  margin: 2em;
+  color: #000000;
+  padding: 1em;
+  height: 300px;
+  width: 80%;
+  max-width: 800px;
+  margin: 2em auto;
+}
 
 /* end features services*/
+.posts h3 {
+  margin: 4% 0 1%;
+  font-size: 2.5em;
+}
+.posts p {
+  display: flex;
+}
+.posts span {
+  margin: 2em;
+  color: #000000;
+  padding: 1em;
+  width: 60%;
+  margin: 2em auto;
+}
+.posts .card {
+  padding: 0.1rem;
+}
+.posts .card p {
+  padding-left: 10%;
+  font-size: 14px;
+  opacity: 0.9;
+}
+.posts .card h6 {
+  font-size: 13px;
+  color: #C75DF9 !important;
+}
+.posts .card a {
+  color: #C75DF9;
+  text-decoration: none;
+  border: #0D89BC 1px solid;
+  padding: 5px;
+  transition: all .5s ease-in-out;
+}
+.posts .card a:hover {
+  color: #0D89BC;
+  border: #C75DF9 1px solid;
+  border-radius: 3px;
+}
+.posts hr {
+  margin: 30px 0;
+}
+
+.statistic {
+  color: #0D89BC;
+}
+.statistic span {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+}
+.statistic i {
+  font-size: 60px;
+}
+.statistic p {
+  color: #C75DF9;
+  margin-top: -8px;
+}
+.statistic hr {
+  color: white;
+  margin-top: 100px;
+  border: none;
+}
+
+.contact-us {
+  margin-bottom: 9%;
+}
+.contact-us .container {
+  margin-top: 6%;
+}
+.contact-us .up-contact-us {
+  background-color: #C75DF9;
+  height: 210px;
+  color: white;
+}
+.contact-us .up-contact-us p {
+  padding: 15px 20px;
+}
+.contact-us .up-contact-us .ctt {
+  margin-top: 30px;
+}
+.contact-us .up-contact-us .ctt a {
+  text-decoration: none;
+  text-transform: uppercase;
+  border: #FFF 1px solid;
+  padding: 8px;
+  color: white;
+}
+.contact-us .up-contact-us .ctt a:hover {
+  border-radius: 5px;
+  opacity: .8;
+}
+.contact-us .down-contact-us .about a {
+  text-decoration: none;
+  font-size: 14px;
+}
+.contact-us .down-contact-us .about span {
+  font-size: 30px;
+}
+.contact-us .down-contact-us .about p {
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+.contact-us .down-contact-us .about i {
+  color: #C75DF9;
+  font-size: 14px;
+}
+.contact-us .down-contact-us .links .myh3 {
+  margin-bottom: 1%;
+}
+.contact-us .down-contact-us .links .myh3 h3 {
+  font-size: 18px;
+  color: #C75DF9;
+  font-weight: 400;
+}
+.contact-us .down-contact-us .links ul {
+  list-style: none;
+  font-size: 14px;
+  color: #C75DF9;
+  line-height: 2;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+.contact-us .down-contact-us .links ul a {
+  text-decoration: none;
+}
+.contact-us .down-contact-us .links ul a:before {
+  content: '> ';
+}
+.contact-us .down-contact-us .links ul a:hover {
+  color: #0D89BC;
+}
+.contact-us .down-contact-us .contact h3 {
+  font-size: 18px;
+  color: #C75DF9;
+  font-weight: 400;
+}
+.contact-us .down-contact-us .contact p {
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+.contact-us .down-contact-us .contact p span {
+  color: #0D89BC;
+}
+
+.copyright .copy {
+  font-size: 12px;
+}
+.copyright .social {
+  color: #0D89BC;
+}
+
+@media (max-width: 590px) {
+  .slider .carousel-inner h1 {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .organisme .content h3 {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+
+  .upper-bar .row > div {
+    text-align: center;
+  }
+
+  .upper-bar .navbar-quote {
+    padding-left: 0;
+  }
+
+  .feature-service h3 {
+    font-size: 2rem;
+  }
+
+  .feature-service ul.row {
+    padding-left: 0;
+  }
+
+  .statistic i {
+    font-size: 50px;
+  }
+
+  .contact-us .ctt {
+    margin-top: 0;
+  }
+
+  .contact-us .up-contact-us {
+    height: 270px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-us .down-contact-us .links {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .contact-us .down-contact-us .links:before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 1px solid #C75DF9;
+    width: 100%;
+  }
+  .contact-us .down-contact-us .links .myh3 {
+    margin-top: 5%;
+    margin-bottom: 0;
+  }
+
+  .contact-us .down-contact-us .contact h3 {
+    margin-top: 10px;
+  }
+  .contact-us .down-contact-us .contact h3:before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 1px solid #C75DF9;
+    border-top: 1px solid white;
+    top: 0;
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
